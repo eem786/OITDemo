@@ -9,4 +9,9 @@ public class OITDemo {
         List<Account> foundAccounts = [SELECT ID,Name FROM Account WHERE FirstName =: userFirstName];
         return foundAccounts;
     }
+
+    public static List<Account> findAccountsByZip ( Integer userZipCode ){
+        List<Account> foundAccounts = [SELECT ID,Name FROM Account WHERE PostalZipCode =: userZipCode];
+        return foundAccounts;
+    }
 }
